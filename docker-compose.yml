@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  base:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - ROS_MASTER_URI=http://192.168.1.128:11311
+      - ROS_IP=192.168.240.4
+    image: dingo:noetic
+    network_mode: "host"
